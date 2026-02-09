@@ -10,6 +10,8 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root
       MYSQL_DATABASE: fullcycle
+    volumes:
+      - ./node:/app
     expose:
       - "3000"
     depends_on:
