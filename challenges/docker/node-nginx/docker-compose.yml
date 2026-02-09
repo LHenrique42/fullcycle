@@ -37,7 +37,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql-data:/var/lib/mysql
+      - ./mysql-data:/var/lib/mysql
     networks:
       - default
 
@@ -45,5 +45,3 @@ networks:
   default:
     name: node-nginx-net
 
-volumes:
-  mysql-data:
