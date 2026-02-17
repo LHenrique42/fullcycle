@@ -123,7 +123,7 @@ describe("Order repository test", () => {
             include: ["items"],
         });
 
-        expect(orderModel.items.length).toStrictEqual(2);
+        expect(orderModel.items).toHaveLength(2);
     });
 
     it("should find an order", async () => {
