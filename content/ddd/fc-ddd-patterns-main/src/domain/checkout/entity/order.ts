@@ -1,4 +1,5 @@
 import OrderItem from "./order_item";
+
 export default class Order {
     private _id: string;
     private _customerId: string;
@@ -45,5 +46,11 @@ export default class Order {
 
     total(): number {
         return this._items.reduce((acc, item) => acc + item.total(), 0);
+    }
+
+    addNewOrderItem(newOrderItem: OrderItem) {
+        this._items.push(newOrderItem);
+        this._total = this.total();
+        this.validate();
     }
 }
